@@ -16,7 +16,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source-directory: test/
+        source-directory: _dev/
         destination-github-username: 'josesoaresif'
         destination-repository-name: 'optest'
         user-email: josesoares@ifthenpay.com
