@@ -14,5 +14,6 @@ jobs:
         git remote set-url origin https://github.com/josesoaresif/optest.git
         git config --global user.email "josesoares@ifthenpay.com"
         git config --global user.name "jose soares"
+        git add .
         git commit -m "Built files"
         git push origin master
