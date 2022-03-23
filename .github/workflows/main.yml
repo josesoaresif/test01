@@ -9,16 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+    - name: push to release repo
+      uses: cpina/github-action-push-to-another-repository@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-    - name: push to release repo
-      run: |
-        touch newfile
-        git remote set-url origin https://github.com/josesoaresif/optest.git
-        git config --global user.email "josesoares@ifthenpay.com"
-        git config --global user.name "jose soares"
-        git add .
-        git commit -m "Built files"
-        git push origin master
+      with:
+        source-directory: _dev/
+        destination-github-username: 'josesoaresif'
+        destination-repository-name: 'optest'
+        user-email: josesoares@ifthenpay.com
+        target-branch: main
