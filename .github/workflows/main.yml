@@ -14,7 +14,7 @@ jobs:
     - name: push to release repo
       uses: cpina/github-action-push-to-another-repository@main
       env:
-        API_TOKEN_GITHUB: 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
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source-directory: .
         destination-github-username: 'josesoaresif'
