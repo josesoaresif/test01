@@ -2,20 +2,27 @@ name: make release
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallelå
 jobs:
-  build:
+  directory:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2
-    - name: push to release repo
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - name: Checkout p1
+      uses: actions/checkout@v2
+    
+    - name: Copycat Directory
+      uses: andstor/copycat-action@v3.0.0
       with:
-        source-directory: _dev/
-        destination-github-username: 'josesoaresif'
-        destination-repository-name: 'optest'
-        user-email: josesoares@ifthenpay.com
-        target-branch: main
+          personal_token: ${{ secrets.API_TOKEN_GITHUB }}
+          src_path: /.
+          dst_path: /.
+          dst_owner: josesoaresif
+          dst_repo_name: optest.git
