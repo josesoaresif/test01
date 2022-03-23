@@ -11,6 +11,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: push to release repo
       run: |
-          git remote set-url origin https://github.com/josesoaresif/optest.git
-          git commit -m "Built files"
-          git push origin master
+        git remote set-url origin https://github.com/josesoaresif/optest.git
+        git commit -m "Built files"
+        git push origin master
