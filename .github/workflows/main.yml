@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: remove _dev
-      run: rm -r _dev
     - name: push to release repo
       uses: cpina/github-action-push-to-another-repository@main
       env:
