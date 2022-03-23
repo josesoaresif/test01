@@ -1,21 +1,21 @@
-name: make release
-
-on:
-  push:
-    branches: [ main ]
-
+name: Copy
+on: gollum
 jobs:
-  build:
+  copy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: push to release repo
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+    - name: Copycat
+      uses: andstor/copycat-action@v3
       with:
-        source-directory: _dev/
-        destination-github-username: 'josesoaresif'
-        destination-repository-name: 'optest'
-        user-email: josesoares@ifthenpay.com
-        target-branch: main
+        personal_token: ${{ secrets.API_TOKEN_GITHUB }}
+        src_path: /.
+        dst_path: /.
+        dst_owner: josesoaresif
+        dst_repo_name: josesoaresif.optest
+        dst_branch: master
+        src_branch: master
+        src_wiki: true
+        dst_wiki: false
+        username: josesoaresif
+        email: josesoares@ifthenpay.com
+
