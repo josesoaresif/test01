@@ -10,12 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: push to release repo
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
-        source-directory: _dev/
-        destination-github-username: 'josesoaresif'
-        destination-repository-name: 'optest'
-        user-email: josesoares@ifthenpay.com
-        target-branch: main
+      run: |
+          git remote set-url origin https://github.com/josesoaresif/optest.git
+          git push origin master
