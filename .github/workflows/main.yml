@@ -13,6 +13,7 @@ jobs:
         fetch-depth: 0
     - name: push to release repo
       run: |
+        touch newfile
         git remote set-url origin https://github.com/josesoaresif/optest.git
         git config --global user.email "josesoares@ifthenpay.com"
         git config --global user.name "jose soares"
