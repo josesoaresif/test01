@@ -1,0 +1,22 @@
+name: make release
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - run: rm -r _dev
+    
+    - name: push to release repo
+    - uses: cpina/github-action-push-to-another-repository@main
+      env:
+        API_TOKEN_GITHUB: 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
+      with:
+        source-directory: .
+        destination-github-username: 'josesoaresif'
+        destination-repository-name: 'optest'
+        user-email: josesoares@ifthenpay.com
+        target-branch: main
