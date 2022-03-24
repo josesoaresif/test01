@@ -18,18 +18,18 @@ jobs:
 
     - name: delete update
       run: |
-          rm -r _dev
-          git add .
-          git commit -m "generated"
+        rm -r _dev
+        git add .
+        git commit -m "generated"
 
     - name: Copycat Directory
       uses: andstor/copycat-action@v3.0.0
       with:
-          personal_token: ${{ secrets.PORTFOLIO_SECRET }}
-          src_branch: main
-          dst_branch: main
-          src_path: /.
-          dst_path: /.
-          dst_owner: josesoaresif
-          dst_repo_name: optest
-          exclude: .github/*
+        personal_token: ${{ secrets.PORTFOLIO_SECRET }}
+        src_branch: main
+        dst_branch: main
+        src_path: /.
+        dst_path: /.
+        dst_owner: josesoaresif
+        dst_repo_name: optest
+        exclude: .github/*
