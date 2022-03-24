@@ -33,6 +33,3 @@ jobs:
           dst_owner: josesoaresif
           dst_repo_name: optest
           exclude: .github/*
-
-
-          
