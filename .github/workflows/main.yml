@@ -14,7 +14,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout p1
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     - name: Copycat Directory
       uses: andstor/copycat-action@v3.0.0
@@ -26,7 +26,7 @@ jobs:
           dst_path: /.
           dst_owner: josesoaresif
           dst_repo_name: optest
-          exclude: .github/*|_dev/*
+          exclude: (.github/*|_dev/*)
 
 
           
