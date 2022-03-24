@@ -25,7 +25,7 @@ jobs:
           src_path: /.
           dst_path: /.
           dst_owner: josesoaresif
-          dst_repo_name: optest.git
+          dst_repo_name: optest
 
 
 
