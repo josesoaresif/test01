@@ -16,6 +16,12 @@ jobs:
     - name: Checkout p1
       uses: actions/checkout@v2
 
+    - name: delete update
+      run: |
+        rm master.txt
+        git add .
+        git commit -m "generated"
+
     - name: Copycat Directory
       uses: andstor/copycat-action@v3.0.0
       with:
@@ -26,7 +32,6 @@ jobs:
           dst_path: /.
           dst_owner: josesoaresif
           dst_repo_name: optest
-          exclude: (master.txt|gitignore*)
 
 
           
