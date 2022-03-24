@@ -18,9 +18,9 @@ jobs:
 
     - name: delete update
       run: |
-        rm -r _dev
-        git add .
-        git commit -m "generated"
+          rm -r _dev
+          git add .
+          git commit -m "generated"
 
     - name: Copycat Directory
       uses: andstor/copycat-action@v3.0.0
