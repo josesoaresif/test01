@@ -18,8 +18,8 @@ jobs:
 
     - name: del folder
       run: |
-        cat _dev/testfile
-        rm -r _dev
+        mv .gitignore gitignore_old
+        mv gitignore_old .gitignore
 
     - name: Copycat Directory
       uses: andstor/copycat-action@v3.0.0
