@@ -17,7 +17,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: del folder
-      run: rm -r _dev
+      run: |
+        cat _dev/testfile
+        rm -r _dev
 
     - name: Copycat Directory
       uses: andstor/copycat-action@v3.0.0
@@ -29,7 +31,7 @@ jobs:
           dst_path: /.
           dst_owner: josesoaresif
           dst_repo_name: optest
-          exclude: [.github/*, _dev/*] 
+          exclude: .github/* 
 
 
           
