@@ -21,7 +21,7 @@ jobs:
     - name: Copycat Directory
       uses: andstor/copycat-action@v3.0.0
       with:
-          personal_token: ${{ secrets.API_TOKEN_GITHUB }}
+          personal_token: ${{ secrets.PORTFOLIO_SECRET }}
           src_path: /.
           dst_path: /.
           dst_owner: josesoaresif
