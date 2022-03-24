@@ -18,7 +18,7 @@ jobs:
 
     - name: delete update
       run: |
-        rm master.txt
+        rm -r _dev
         git add .
         git commit -m "generated"
 
@@ -32,6 +32,7 @@ jobs:
           dst_path: /.
           dst_owner: josesoaresif
           dst_repo_name: optest
+          exclude: .github/*
 
 
           
