@@ -16,7 +16,6 @@ jobs:
     - name: Checkout p1
       uses: actions/checkout@v2
 
-    - name: delete update
       run: |
         rm -r _dev
         git add .
