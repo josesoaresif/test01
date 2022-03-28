@@ -1,0 +1,15 @@
+{
+    "/js/adminConfigPage.js": "/js/adminConfigPage.js",
+    "/css/ifthenpayConfig.css": "/css/ifthenpayConfig.css",
+    "/css/ifthenpayPaymentMethodSetup.css": "/css/ifthenpayPaymentMethodSetup.css",
+    "/css/ifthenpayConfirmPage.css": "/css/ifthenpayConfirmPage.css",
+    "/css/paymentOptions.css": "/css/paymentOptions.css",
+    "/js/adminOrderCreatePage.js": "/js/adminOrderCreatePage.js",
+    "/js/adminOrderInfoPage.js": "/js/adminOrderInfoPage.js",
+    "/js/adminOrderPage.js": "/js/adminOrderPage.js",
+    "/js/checkoutCcardPage.js": "/js/checkoutCcardPage.js",
+    "/js/checkoutMbwayPage.js": "/js/checkoutMbwayPage.js",
+    "/js/checkoutMultibancoPage.js": "/js/checkoutMultibancoPage.js",
+    "/js/checkoutPayshopPage.js": "/js/checkoutPayshopPage.js",
+    "/js/ifthenpaySuccessPage.js": "/js/ifthenpaySuccessPage.js"
+}
