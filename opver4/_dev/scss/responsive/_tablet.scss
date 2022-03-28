@@ -1,0 +1,22 @@
+@media screen and (min-width: 280px) and (max-width: 480px)  {
+    .mbwayCountdownPanel {
+        width:100%;
+    }
+    #paymentReturnPanel {
+        width: 100%;
+        .panel-body {
+            .paymentData {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 540px) {
+    .mbwayCountdownPanel {
+        width:100%;
+    }
+    #paymentReturnPanel {
+        width: 100%;
+    }
+}

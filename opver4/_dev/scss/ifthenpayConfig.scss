@@ -1,0 +1,108 @@
+@import "mixins/mixin";
+
+.panel-heading {
+    height: 110px !important;
+    vertical-align: middle;
+    padding: 20px 0px 0px 20px !important;
+    img {
+        max-width: 4%;
+    }
+    
+    #help-documentation-btn {
+        @include marginAndFloat(0px 20px);
+    }
+    #create-account-btn {
+        @include marginAndFloat(0px 20px);
+    }
+}
+.panel-body {
+    h3 {
+        border-bottom: none !important;
+        margin: 20px 0px 20px 0px;
+    }
+    ul {
+        font-size: 16px;
+        li {
+            h6 {
+                line-height: 1.5;
+            } 
+        }
+    }
+    #inputBackofficeKey {
+        width: 550px;
+    }
+}
+.settingsModule {
+    #sandboxHelp {
+        @include helperSmall();
+    }
+    .btn-primary {
+        margin-top: 20px;
+    }
+    @include swichToggleBtn();
+}
+.updateModulePanel {
+    .panel-body {
+        @include imgAndTitle(5%);
+        .bulletPoints {
+            text-align: left;
+            margin: 25px;
+            font-size: 12px;
+            h3 {
+                font-weight: bold;
+                margin-bottom: -20px !important;
+            }
+        }
+        button {
+            width: 50%;
+            margin: auto;
+        }
+    }
+}
+.resetIfthenpayAccountsPanel {
+    .panel-body {
+        @include imgAndTitle();
+        .spinnerDivWithBtn {
+            width: 30%;
+            margin: auto;
+            display: flex;
+            .appSpinner {
+                padding-left: 20px;
+                padding-top: 5px;
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+#mbwayOrderCancelHelp {
+    @include helperSmall();
+}
+.callback-list-group {
+    margin-top:15px !important;
+    .callback-list {
+        height: 55px;
+        #callbackUrl {
+            text-align:left;
+        }
+    }
+}
+
+.chooseNewEntidadeDiv {
+    display: flex;
+    #chooseNewEntidade {
+        margin-left: 160px;
+    }
+    .appSpinner {
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+
+
+
+  
+  
+  
+  
