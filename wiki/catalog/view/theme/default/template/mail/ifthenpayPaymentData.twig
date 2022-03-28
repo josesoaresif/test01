@@ -1,0 +1,75 @@
+  <table style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+    <tbody>
+      <tr>
+          <table cellpadding="0" cellspacing="0" style="width: 211px;" >
+            <tbody>
+                <tr>
+                    <td valign="top" style="padding-top: 5px;padding-bottom: 5px;">
+                        {% if paymentMethod |lower == 'multibanco' %}
+                            <img src="{{paymentMethodLogo}}" alt=" logotipo" width="50" height="50">
+                        {% elseif paymentMethod |lower == 'ccard' %}
+                            <img src="{{paymentMethodLogo}}" alt=" logotipo" width="65" height="18">
+                        {% else %}
+                            <img src="{{paymentMethodLogo}}" alt=" logotipo" width="70" height="70">
+                        {% endif %}
+                    </td>
+                </tr>
+                {% if paymentMethod |lower == 'multibanco' %}
+                <tr>
+                    <td valign="top" align="left" style="padding-top: 6px; padding-bottom: 6px;">
+                        <strong>&nbsp;{{ifthenpayPaymentPanelEntidade}}</strong>
+                    </td>
+                    <td valign="top" align="right" style="padding-top: 6px; padding-bottom: 6px; padding-right: 2px;">
+                        {{entidade}}
+                    </td>
+                </tr>
+                    <tr>
+                    <td valign="top" align="left" style="padding-top: 6px; padding-bottom: 6px;">
+                        <strong>&nbsp;{{ifthenpayPaymentPanelReferencia}}</strong>
+                    </td>
+                    <td valign="top" align="right" style="padding-top: 6px; padding-bottom: 6px; padding-right: 2px;">
+                        {{referencia}}
+                    </td>
+                    {% if validade %}
+                        <tr>
+                            <td valign="top" align="left" style="padding-top: 6px; padding-bottom: 6px;">
+                                <strong>&nbsp;{{ifthenpayPaymentPanelValidade}}</strong>
+                            </td>
+                            <td valign="top" align="right" style="padding-top: 6px; padding-bottom: 6px; padding-right: 2px;">
+                                {{validade}}
+                            </td>
+                        </tr>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if paymentMethod |lower == 'payshop' %}
+                    <tr>
+                        <td valign="top" align="left" style="padding-top: 6px; padding-bottom: 6px;">
+                            <strong>&nbsp;{{ifthenpayPaymentPanelReferencia}}</strong>
+                        </td>
+                        <td valign="top" align="right" style="padding-top: 6px; padding-bottom: 6px; padding-right: 2px;">
+                            {{referencia}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="left" style="padding-top: 6px; padding-bottom: 6px;">
+                            <strong>&nbsp;{{ifthenpayPaymentPanelValidade}}</strong>
+                        </td>
+                        <td valign="top" align="right" style="padding-top: 6px; padding-bottom: 6px; padding-right: 2px;">
+                            {{validade}}
+                        </td>
+                    </tr>
+                {% endif %}
+                <tr>
+                <td valign="top" align="left" style="padding-top: 6px; padding-bottom: 6px; ">
+                    <strong>&nbsp;{{ifthenpayPaymentPanelTotalToPay}}</strong>
+                </td>
+                <td valign="top" align="right" style="padding-top: 6px; padding-bottom: 6px;  padding-right: 2px;">
+                    {{totalToPay}}
+                </td>
+                </tr>
+            </tbody>
+        </table>
+      </tr>
+    </tbody>
+  </table>

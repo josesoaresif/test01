@@ -1,0 +1,78 @@
+@mixin marginAndFloat($margin, $borderBottom: false) {
+    margin: $margin !important;
+    font-weight: bold;
+    @if $borderBottom {
+        border-bottom: none !important;
+    }
+}
+@mixin orderDetail {
+    margin-bottom: 15px;
+    .paymentLogo {
+        img {
+            width:100px;
+            height:auto;
+            margin-top: 15px;
+        }
+    }
+    .list-group {
+        width: 315px;
+    }
+}
+@mixin imgAndTitle($width: 15%) {
+    img {
+        max-width: $width;
+    }
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+}
+@mixin mbwayInputPhone {
+    margin-top: 20px;
+    margin-left:20px;
+    width: 210px !important;
+    border: none !important;
+    #ifthenpay_mbway_mobilephone_error {
+        display:none;
+        margin-top: 10px;
+        padding: 5px 5px 5px 0px;
+        text-align: center;
+    }
+    .input-container {
+        display: flex;
+        width: 100%;
+        .icon {
+            text-align: center;
+            max-width: 100%;
+            max-height: 33px;
+            border: 1px solid #6c868e;
+            background-color: #fff;
+            border-right: none;
+            image-rendering: pixelated;
+        }
+        .input-field {
+            width: 100%;
+            padding: 5px;
+            outline: none;
+            border: 1px solid #6c868e;
+        }
+    }
+}
+@mixin swichToggleBtn() {
+    .btn-default.btn-on.active{
+        background-color: #5BB75B;color: white;
+    }
+    .btn-default.btn-off.active{
+        background-color: #DA4F49;color: white;
+    }
+}
+@mixin helperSmall() {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    font-size: 75%;
+}
+
+    
+  

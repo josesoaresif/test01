@@ -1,0 +1,53 @@
+on:
+  push:
+    branches: [ production ]
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Copycat
+      uses: andstor/copycat-action@v3
+      with:
+        personal_token: ${{ secrets.GH_TOKEN }}
+        src_path: /.
+        dst_path: /wiki/
+        dst_owner: josesoaresif
+        dst_repo_name: test01
+        dst_branch: main
+        src_branch: production
+        src_wiki: false
+        dst_wiki: false
+        username: josesoaresif
+        email: josesoares@ifthenpay.com
+
+
+# on:
+#   push:
+#     branches: [ production ]
+  
+# jobs:
+#   move-code:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#         with:
+#           fetch-depth: 0
+
+#       - uses: olivr/copybara-action@v1.2.3
+#         with:
+#           ssh_key: ${{ secrets.SSH_KEY }}
+#           access_token: ${{ secrets.GH_TOKEN }}
+#           sot_repo: josesoaresif/opencart3-dev
+#           destination_repo: josesoaresif/test01
+#           push_include: "**"
+#           push_exclude: "_dev/**/* public assetCreate.js mix-manifest.json package.json package-lock.json tsconfig.json webpack.mix.js .github/**/*"
+#           sot_branch: production
+#           destination_branch: main
+#           push_move: |
+#             admin||opencart_version_3/admin
+#             catalog||opencart_version_3/catalog
+#             image||opencart_version_3/image
+#             system||opencart_version_3/system
+#           pr_include: "**"
+
+
