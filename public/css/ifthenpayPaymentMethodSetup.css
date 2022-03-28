@@ -1,0 +1,37 @@
+.btn-default.btn-on.active {
+  background-color: #5BB75B;
+  color: white;
+}
+
+.btn-default.btn-off.active {
+  background-color: #DA4F49;
+  color: white;
+}
+
+#mbwayOrderCancelHelp {
+  position: relative;
+  top: 10px;
+  left: 20px;
+  font-size: 75%;
+}
+
+.callback-list-group {
+  margin-top: 15px !important;
+}
+.callback-list-group .callback-list {
+  height: 55px;
+}
+.callback-list-group .callback-list #callbackUrl {
+  text-align: left;
+}
+
+.chooseNewEntidadeDiv {
+  display: flex;
+}
+.chooseNewEntidadeDiv #chooseNewEntidade {
+  margin-left: 160px;
+}
+.chooseNewEntidadeDiv .appSpinner {
+  margin-top: 0;
+  margin-left: 0;
+}

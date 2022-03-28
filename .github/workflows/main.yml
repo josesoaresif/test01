@@ -1,0 +1,25 @@
+on:
+  push:
+    branches: [ production ]
+  
+jobs:
+  move-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: olivr/copybara-action@v1.2.3
+        with:
+          ssh_key: ${{ secrets.SSH_KEY }}
+          access_token: ${{ secrets.GH_TOKEN }}
+          sot_repo: josesoaresif/opencart3-dev
+          destination_repo: josesoaresif/test01
+          push_include: "**"
+          push_exclude: "_dev/**/* public assetCreate.js mix-manifest.json package.json package-lock.json tsconfig.json webpack.mix.js"
+          sot_branch: production
+          destination_branch: main
+          pr_move: |
+            ||'opencart versão 3'
+        
