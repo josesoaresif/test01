@@ -49,7 +49,7 @@ jobs:
         username: josesoaresif
         email: josesoares@ifthenpay.com
         clean: true
-        exclude: "*+(/admin/|/image/)*"
+        exclude: "(admin/|image/)*"
 
 
 
