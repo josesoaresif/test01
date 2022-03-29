@@ -1,0 +1,17 @@
+<div class="field required" id="ifthenpayMbwayPhoneDiv">
+  <div class="control input-container">
+    <img src="image/payment/ifthenpay/mbway.svg" class="icon" alt="mbway logo">
+    <input name="ifthenpayMbwayPhone" class="text input-field" type="number" id="ifthenpayMbwayPhone" placeholder="{{mbwayPhoneNumber}}">
+  </div>
+</div>
+
+<div class="buttons">
+  <div class="pull-right">
+    <input type="button" value="{{ button_confirm }}" id="button-confirm" data-loading-text="{{ text_loading }}" class="btn btn-primary" />
+  </div>
+</div>
+<link href="{{mbwayStyle}}" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+  var mbwayLanguage = {{mbwayLanguage}};
+</script>
+<script type="text/javascript" src="{{mbwayScript}}"></script>
