@@ -2,3 +2,5 @@
 native/*
 
 test.txt
+docker-compose.yml
+_dev/
